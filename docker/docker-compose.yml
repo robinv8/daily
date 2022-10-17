@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  web:
+    image: daily-web:latest
+    container_name: daily-web
+    build: 
+      context: ..
+      dockerfile: ./docker/web/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+  
+  server:
+    image: daliy-server:latest
+    container_name: daily-server
+    build: 
+      context: ..
+      dockerfile: ./docker/server/Dockerfile
+    restart: always
+    ports:
+      - 4000:4000
