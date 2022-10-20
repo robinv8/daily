@@ -1,4 +1,4 @@
-name: Docker
+name: Web image publish
 
 on:
   push:
@@ -46,8 +46,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Build and push Web image
-        id: web-build-and-push
+      - name: Build and push Docker image
+        id: build-and-push
         uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
         with:
           context: .
