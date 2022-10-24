@@ -1,16 +1,17 @@
-import { defineConfig } from "astro/config";
-import node from "@astrojs/node";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import node from '@astrojs/node';
+import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  integrations: [tailwind()],
+  output: 'server',
+  integrations: [tailwind(), react()],
   adapter: node({
-    mode: "standalone",
+    mode: 'standalone',
   }),
   server: {
     port: 3000,
-    host: "0.0.0.0",
+    host: '0.0.0.0',
   },
 });
