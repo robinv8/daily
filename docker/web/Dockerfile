@@ -17,7 +17,7 @@ WORKDIR /app
 
 COPY --from=build /app/dist .
 
-RUN npm init -y && npm install astro @astrojs/node
+RUN npm init -y && npm install astro @astrojs/node @astrojs/react react react-dom
 
 EXPOSE 3000
 CMD [ "node", "server/entry.mjs" ]

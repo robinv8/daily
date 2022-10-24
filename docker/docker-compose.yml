@@ -9,6 +9,8 @@ services:
     restart: always
     ports:
       - 3000:3000
+    depends_on:
+      - server
   
   server:
     image: daliy-server:latest

@@ -2,7 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { Card } from '../components';
 
-const response = await fetch('http://localhost:4000/posts');
+const response = await fetch(
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:4000/posts'
+    : 'http://daily-server:4000/posts',
+);
 const posts = await response.json();
 console.log('posts', posts);
 ---
