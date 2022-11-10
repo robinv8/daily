@@ -4,11 +4,11 @@ import { Card } from '../components';
 
 const response = await fetch(
   process.env.NODE_ENV === 'development'
-    ? 'http://localhost:4000/posts'
-    : 'http://daily-server:4000/posts',
+    ? 'http://localhost:4000/'
+    : 'http://daily-server:4000/',
 );
 const posts = await response.json();
-console.log('posts', posts);
+
 ---
 
 <Layout title="daily">
@@ -23,4 +23,17 @@ console.log('posts', posts);
   </div>
 </Layout>
 
-<style></style>
+<style>
+
+  @font-face {
+    font-family: 'LXGWWenKaiMono-Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/LXGWWenKaiMono-Bold.ttf') format('truetype');
+  }
+
+  body {
+    font-family: 'LXGWWenKaiMono-Bold', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+</style>

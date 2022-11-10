@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/node': ^2.0.1
   '@astrojs/react': ^1.2.1
   '@astrojs/tailwind': ^2.1.1
+  '@tailwindcss/line-clamp': ^0.4.2
   '@types/react': ^18.0.21
   astro: ^1.5.2
   react: ^18.2.0
@@ -12,6 +13,7 @@ specifiers:
 
 dependencies:
   '@astrojs/tailwind': 2.1.1_tailwindcss@3.2.0
+  '@tailwindcss/line-clamp': registry.npmjs.org/@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.0
   astro: 1.5.2
   tailwindcss: 3.2.0
 
@@ -3938,6 +3940,17 @@ packages:
       '@jridgewell/resolve-uri': registry.npmjs.org/@jridgewell/resolve-uri/3.1.0
       '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec/1.4.14
     dev: true
+
+  registry.npmjs.org/@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.0:
+    resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@tailwindcss/line-clamp/-/line-clamp-0.4.2.tgz}
+    id: registry.npmjs.org/@tailwindcss/line-clamp/0.4.2
+    name: '@tailwindcss/line-clamp'
+    version: 0.4.2
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.2.0
+    dev: false
 
   registry.npmjs.org/@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz}
