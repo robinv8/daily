@@ -21,3 +21,18 @@ services:
     restart: always
     ports:
       - 4000:4000
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:13.2
+    container_name: daily-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: hellodaily
+      POSTGRES_USER: postgres
+      POSTGRES_DB: daily
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
