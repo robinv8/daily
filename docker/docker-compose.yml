@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  web:
+  daily-web:
     image: daily-web:latest
     container_name: daily-web
     build: 
@@ -12,7 +12,7 @@ services:
     depends_on:
       - server
   
-  server:
+  daily-server:
     image: daliy-server:latest
     container_name: daily-server
     build: 
@@ -22,9 +22,9 @@ services:
     ports:
       - 4000:4000
     depends_on:
-      - db
+      - daily-db
   
-  db:
+  daily-db:
     image: postgres:13.2
     container_name: daily-db
     restart: always
