@@ -16,7 +16,7 @@ func Home() []entity.SiteInfo {
 	}
 	// sort by created_at
 	sort.Slice(siteInfo, func(i, j int) bool {
-		return siteInfo[i].CreatedAt.Before(siteInfo[j].CreatedAt)
+		return siteInfo[i].CreatedAt.After(siteInfo[j].CreatedAt)
 	})
 
 	return siteInfo
