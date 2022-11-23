@@ -6,7 +6,7 @@ const Card = ({ items }) => {
           src={items.image_url}
           loading="lazy"
           alt={items.title}
-          className="w-full h-48 rounded-t-md"
+          className="w-full h-48 rounded-t-md object-contain"
         />
         <div className="pt-3 ml-4 mr-2 mb-3">
           <h3 className="text-xl text-gray-900">{items.title}</h3>
