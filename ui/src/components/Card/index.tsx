@@ -16,7 +16,7 @@ const Card = ({ items }) => {
             src={items.image_url}
             loading="lazy"
             alt={items.title}
-            className="w-full h-48 rounded-t-md object-contain"
+            className="w-full h-48 rounded-t-md object-cover"
           />
         )}
 
