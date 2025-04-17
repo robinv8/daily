@@ -8,9 +8,8 @@ import (
 )
 
 func NewDB() *xorm.Engine {
-	// dbHost := "localhost"
-	dbHost := "daily-db"
-	db, err := xorm.NewEngine("postgres", "user=postgres password=hellodaily dbname=daily sslmode=disable host="+dbHost+" port=5432")
+	dbHost := "101.42.239.82"
+	db, err := xorm.NewEngine("postgres", "user=postgres password=xondo9-teKcob-harqez dbname=daily sslmode=disable host="+dbHost+" port=15432")
 	if err != nil {
 		log.Fatal(err)
 	}
